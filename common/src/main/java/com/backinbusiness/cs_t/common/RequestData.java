@@ -1,30 +1,35 @@
 package com.backinbusiness.cs_t.common;
 
 public class RequestData {
-    private int intVal;
-    private String stringVal;
+    private long fileLength;
+    private String path;
 
-    public int getIntVal() {
-        return intVal;
+    public RequestData(long fileLength, String path) {
+        this.fileLength = fileLength;
+        this.path = path;
     }
 
-    public void setIntVal(int intVal) {
-        this.intVal = intVal;
+    public long getFileLength() {
+        return fileLength;
     }
 
-    public String getStringVal() {
-        return stringVal;
+    public void setFileLength(long fileLength) {
+        this.fileLength = fileLength;
     }
 
-    public void setStringVal(String stringVal) {
-        this.stringVal = stringVal;
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 
     @Override
     public String toString() {
         return "RequestData{" +
-                "intVal=" + intVal +
-                ", stringVal='" + stringVal + '\'' +
+                "path = " + path +
+                ", length = '" + fileLength + '\'' +
                 '}';
     }
 }

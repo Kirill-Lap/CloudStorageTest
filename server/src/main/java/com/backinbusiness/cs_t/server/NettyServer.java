@@ -34,6 +34,7 @@ public class NettyServer {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline().addLast(
+                                    new ProtocolHandler(),
                                     new ChunkedWriteHandler(),
                                     new SimpleProcessingHandler());
                         }
